@@ -4,12 +4,12 @@ $conexion=@new mysqli('localhost','alumne','','biblioteca');
 
 //si no se pudo conectar...
 if ($conexion->connect_errno)
-    throw new Exception('ERROr: no se pudo conectar con la bdd');
+    throw new Exception('ERROR: no se pudo conectar con la bdd');
 
 //establece el conjunto de caracteres a utf-8
 $conexion->set_charset('utf8');
 
-echo "Conexión establecida correctamente";
+echo "Conexión establecida";
 
 //preparamos la consulta de inserción
 $consulta="INSERT INTO libros(isbn, titulo, editorial, idioma, autor, ediciones, edadrecomendada)
